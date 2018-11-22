@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Subrata Bauri
+ * @copyright Copyright (c) 2018 Subrata Bauri
+ * @package Mymodule_Bestsellers
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/products/bestsellers">
+        <service class="Mymodule\Bestsellers\Api\BestSellerProductRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+</routes>
